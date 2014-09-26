@@ -1,7 +1,10 @@
+package org.tom.camel;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.camel.component.ActiveMQComponent;
+import org.apache.camel.CamelContext;
 import org.apache.camel.component.jms.JmsConfiguration;
+import org.apache.camel.impl.DefaultCamelContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
@@ -42,5 +45,8 @@ public class CamelJMSConfig {
         transactionManager.setConnectionFactory(activeMqConnectionFactory());
         return transactionManager;
     }
+
+
+
 
 }

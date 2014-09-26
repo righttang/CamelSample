@@ -1,0 +1,6 @@
+org\tom\camel\SampleRESTController.class
+org\tom\camel\CamelRESTRoute.class
+org\tom\camel\CamelSimpleCopyFile.class
+org\tom\camel\CamelCopyFileRoute.class
+org\tom\camel\CamelJMSConfig.class
+org\tom\camel\CamelSpringMain.class
