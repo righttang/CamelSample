@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.jms.connection.JmsTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.tom.camel.Route.SBean;
 
 import javax.jms.ConnectionFactory;
 
@@ -44,6 +45,11 @@ public class CamelJMSConfig {
         JmsTransactionManager transactionManager = new JmsTransactionManager();
         transactionManager.setConnectionFactory(activeMqConnectionFactory());
         return transactionManager;
+    }
+
+    @Bean(name = "singletonTest")
+    public SBean singletonTest() {
+        return new SBean();
     }
 
 
